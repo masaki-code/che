@@ -34,3 +34,9 @@ commands:
         type: exec
         command: composer update
         component: php
+  - name: phpunit
+    actions:
+      - workdir: '${CHE_PROJECTS_ROOT}/masaki-code-che'
+        type: exec
+        command: vendor/bin/phpunit tests/
+        component: php
